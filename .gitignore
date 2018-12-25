@@ -6,5 +6,5 @@ target/
 .DS_Store
 .gitattributes
 
-*.properties
+xxl-job-admin/src/main/resources/application.properties
 
