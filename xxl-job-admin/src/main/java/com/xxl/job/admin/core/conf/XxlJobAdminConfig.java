@@ -43,8 +43,8 @@ public class XxlJobAdminConfig implements InitializingBean{
     @Value("${xxl.job.accessToken}")
     private String accessToken;
 
-    @Value("${spring.mail.username}")
-    private String emailUserName;
+//    @Value("${spring.mail.username}")
+//    private String emailUserName;
 
     // dao, service
 
@@ -58,8 +58,10 @@ public class XxlJobAdminConfig implements InitializingBean{
     private XxlJobGroupDao xxlJobGroupDao;
     @Resource
     private AdminBiz adminBiz;
-    @Resource
-    private JavaMailSender mailSender;
+
+    // FIXME: use DingTalk
+//    @Resource
+//    private JavaMailSender mailSender;
 
     public String getLoginUsername() {
         return loginUsername;
@@ -77,9 +79,9 @@ public class XxlJobAdminConfig implements InitializingBean{
         return accessToken;
     }
 
-    public String getEmailUserName() {
-        return emailUserName;
-    }
+//    public String getEmailUserName() {
+//        return emailUserName;
+//    }
 
     public XxlJobLogDao getXxlJobLogDao() {
         return xxlJobLogDao;
@@ -101,8 +103,8 @@ public class XxlJobAdminConfig implements InitializingBean{
         return adminBiz;
     }
 
-    public JavaMailSender getMailSender() {
-        return mailSender;
-    }
+//    public JavaMailSender getMailSender() {
+//        return mailSender;
+//    }
 
 }

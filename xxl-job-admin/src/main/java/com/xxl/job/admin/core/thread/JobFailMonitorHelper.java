@@ -171,15 +171,19 @@ public class JobFailMonitorHelper {
 
 				// make mail
 				try {
-					MimeMessage mimeMessage = XxlJobAdminConfig.getAdminConfig().getMailSender().createMimeMessage();
+					// FIXME: use DingTalk
+					System.out.println(title);
+					System.out.println(content);
 
-					MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
-					helper.setFrom(XxlJobAdminConfig.getAdminConfig().getEmailUserName(), personal);
-					helper.setTo(email);
-					helper.setSubject(title);
-					helper.setText(content, true);
-
-					XxlJobAdminConfig.getAdminConfig().getMailSender().send(mimeMessage);
+//					MimeMessage mimeMessage = XxlJobAdminConfig.getAdminConfig().getMailSender().createMimeMessage();
+//
+//					MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+//					helper.setFrom(XxlJobAdminConfig.getAdminConfig().getEmailUserName(), personal);
+//					helper.setTo(email);
+//					helper.setSubject(title);
+//					helper.setText(content, true);
+//
+//					XxlJobAdminConfig.getAdminConfig().getMailSender().send(mimeMessage);
 				} catch (Exception e) {
 					logger.error(">>>>>>>>>>> job monitor alarm email send error, JobLogId:{}", jobLog.getId(), e);
 
